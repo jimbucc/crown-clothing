@@ -1,0 +1,83 @@
+.container {
+    margin: 20px;
+    display: grid;
+    height: 500px;
+    grid-template-columns: repeat(4, 25%);
+    grid-template-rows: [row-1-start] 5rem [row-1-end row-2-start] minmax(10px, auto) [row-2-end row-3-start] 100px;
+    /* grid-column-gap: 20px;
+    grid-row-gap: 10px; */
+    grid-gap: 10px 20px;
+    grid-template-areas: "header header header header"
+                         "side side main main"
+                         "footer footer footer footer"
+}
+
+.el1 {
+    background: rgba(255, 154, 72, 0.5);
+}
+
+.el2 {
+    background: rgba(255, 0, 0, 0.5);
+    /* grid-column-start: 1;
+    grid-column-end: -1; */
+    grid-column: 1 / -1;
+    /* grid-row-start: row-2-start;
+    grid-row-end: span 1; */
+    /* grid-row: row-2-start / span 1; */
+    grid-area: main;
+    z-index: 10;
+}
+
+.el3 {
+    background: rgba(0, 128, 0, 0.5);
+    /* grid-column-start: 2;
+    grid-column-end: span 3; 
+    grid-row-start: row-1-start;
+    grid-row-end: row-2-end; */
+    grid-area: header;
+}
+
+.el4 {
+    background: rgba(0, 4, 255, 0.5);
+    grid-area: footer;
+} 
+
+/* html {
+    height: 100%;
+}
+
+body {
+    display: grid;
+    margin: 20px;
+    height: 100%;
+    grid-template-columns: [col-1-start] 20% [col-2-start] 3fr [col-2-end];
+    grid-template-rows: [row-1-start] 4.5rem [row-2-start row-1-end] auto [row-3-start row-2-end] 4.5rem [row-3-end];
+}
+
+header {
+    background: blue;
+    color: white;
+    grid-column-start: col-1-start;
+    grid-column-end: col-2-end; /* -1 
+}
+
+main {
+    background: red;
+    color: white;
+    grid-column-start: col-2-start;
+    grid-column-end: span 1;
+}
+
+aside {
+    background: green;
+    color: white;
+    grid-column-start: col-1-start;
+    grid-row-start: row-2-start;
+}
+
+footer {
+    background: purple;
+    color: white;
+    grid-column-start: col-1-start;
+    grid-column-end: col-2-end;
+} */
