@@ -64,10 +64,13 @@ header {
 }
 
 main {
-    background: red;
+    background: rgb(243, 220, 143);
     color: white;
     grid-column-start: col-2-start;
     grid-column-end: span 1;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 8px 8px;
 }
 
 aside {
